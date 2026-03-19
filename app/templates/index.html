@@ -1,19 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudo Flask - Temp Code</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
+{% include 'nav.html' %}
     <div>
         <h3>Estudo Flask</h3>
         <h5>@campcodebrasil</h5>
     </div>
     <div>
-        <p>Bem-vindo {{context.usuario}} a aula de Flask!!!</p>
-        <p><n>Idade: {{context.idade}}</n></p>
-        <a href="{{url_for('novapag')}}">Link para nova página</a>
+        <p>Bem-vindo {{context.usuario}} à aula de Flask!!!</p>
+        <p>Idade: {{context.idade}}</p>
+
+        <img src="{{url_for('static', filename='img/Logo.png')}}" alt="">
+
     </div>
-</body>
-</html>
+{% endblock %}
